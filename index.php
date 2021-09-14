@@ -28,7 +28,7 @@
 				<label for="male">Male</label><br>
 			<p> Date of birth: <input type="date" name="date_of_birth"></p>
 			<p>Highest academic level 
-				<select name="highest_academic_level">
+				<select name="education_level">
 					<option value="primary">Primary</option>
 					<option value="secondary">Secondary</option>
 					<option value="university">University</option>
@@ -41,11 +41,11 @@
 			<p> Email:    <input type="email" name="email"></p>
 			<p> Password: <input type="password" name="password"></p>
 			<p> Learning Option: <br>
-				<input type="radio" id="iot" name="learning_option_id" value="1">
+				<input type="radio" id="iot" name="course" value="1">
 				<label for="iot">IOT</label><br>
-				<input type="radio" id="sod" name="learning_option_id" value="2">
+				<input type="radio" id="sod" name="course" value="2">
 				<label for="sod">Software Development</label><br>
-				<input type="radio" id="civil_engineering" name="learning_option_id" value="3">
+				<input type="radio" id="civil_engineering" name="course" value="3">
 				<label for="civil_engineering">Civil Engineering</label>
 			</p>
 			<p><input type="submit" name="submit" value="Submit"></p>

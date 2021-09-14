@@ -2,7 +2,7 @@
 // check if the form is submitted
 if (isset($_POST['submit'])) { 
 	// 1. Create a new connection to the server and to the database
-	$connection = mysqli_connect('localhost', 'root', '','sdf');
+	$connection = mysqli_connect('localhost', 'root', '','sdf_database');
 
 	// 2. Test if the connection works
 	if($connection === false){
@@ -14,20 +14,20 @@ if (isset($_POST['submit'])) {
 	$last_name  = $_POST['last_name'];
 	$gender     = $_POST['gender'];
 	$date_of_birth = $_POST['date_of_birth'];
-	$highest_academic_level = $_POST['highest_academic_level'];
+	$highest_academic_level = $_POST['education_level'];
 	$province   = $_POST['province'];
 	$district   = $_POST['district'];
 	$sector     = $_POST['sector'];
 	$cell       = $_POST['cell'];
 	$email      = $_POST['email'];
 	$password   = $_POST['password'];
-	$learning_option_id = $_POST['learning_option_id'];
+	$learning_option_id = $_POST['course'];
 
 	
 	// 4. create variable for insert query
 	$query = "INSERT INTO applicants( first_name,	last_name,	gender,
-	 date_of_birth, highest_academic_level, province,
-	  district, sector, cell, email, password, learning_option_id) VALUES ('$first_name',
+	 date_of_birth, education_level, province,
+	  district, sector, cell, email, password, course) VALUES ('$first_name',
 	  '$last_name','$gender','$date_of_birth', '$highest_academic_level',
 	   '$province', '$district', '$sector', '$cell', '$email', '$password',
 	    '$learning_option_id')";
