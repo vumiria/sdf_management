@@ -1,3 +1,8 @@
+
+<html>
+	<title>registration</title>
+	<link rel="stylesheet" href="sytle.css">
+
 <?php 
 // check if the form is submitted
 if (isset($_POST['submit'])) { 
@@ -10,7 +15,7 @@ if (isset($_POST['submit'])) {
 	}
 
 	// 3. Create variables to capture information from the form
-	$first_name = $_POST['izina'];
+	$first_name = $_POST['first_name'];
 	$last_name  = $_POST['last_name'];
 	$gender     = $_POST['gender'];
 	$date_of_birth = $_POST['date_of_birth'];
@@ -35,7 +40,7 @@ if (isset($_POST['submit'])) {
 	// 5. Execute the query like this: 
 	if (mysqli_query($connection, $query) === true) {
 		echo "Your application has been submitted! You will be informed of the feedback 
-        of your application not later than September 15, 2021.";
+        of your application not later than September s15, 2021.";
 	} else {
 		echo "ERROR: There was a problem" . mysqli_error($connection);
 	}
