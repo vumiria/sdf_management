@@ -19,7 +19,7 @@
 
 		<p> Fill this form to apply: </p>
 <div class="container">
-		<form name="new_applicant_form" action="registration.php" method="post">
+		<form name="new_applicant_form" action="applicants_controller.php" method="post">
 			<p> First name: <input type="text" name="first_name" class="form-control"> </p>
 			<p> Last name:  <input type="text" name="last_name" class="form-control"></p>
 			<p> Gender: <br>

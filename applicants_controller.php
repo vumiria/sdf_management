@@ -1,8 +1,3 @@
-
-<html>
-	<title>registration</title>
-	<link rel="stylesheet" href="sytle.css">
-
 <?php 
 // check if the form is submitted
 if (isset($_POST['submit'])) { 
@@ -39,8 +34,12 @@ if (isset($_POST['submit'])) {
 
 	// 5. Execute the query like this: 
 	if (mysqli_query($connection, $query) === true) {
+		$last_id=mysqli_insert_id($connection);
 		echo "Your application has been submitted! You will be informed of the feedback 
         of your application not later than September s15, 2021.";
+
+        header("location:show_applicant.php/?applicant_id=$last_id");
+
 	} else {
 		echo "ERROR: There was a problem" . mysqli_error($connection);
 	}
